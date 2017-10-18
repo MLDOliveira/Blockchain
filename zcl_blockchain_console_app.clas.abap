@@ -28,7 +28,7 @@ CLASS zcl_blockchain_console_app IMPLEMENTATION.
         argument        = 'X5123'
     ).
 
-    out->write_text( |Query-Result: { lv_result }| ).
+    out->write_text( |Query-Result: The car with ID X5123 has { lv_result } km.| ).
   ENDMETHOD.
 
 ENDCLASS.
