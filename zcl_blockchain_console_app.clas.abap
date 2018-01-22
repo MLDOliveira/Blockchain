@@ -17,7 +17,7 @@ CLASS zcl_blockchain_console_app IMPLEMENTATION.
     DATA(lo_cf_service_mgr) = cl_cf_servicemanager=>get_instance( ).
 
     DATA(lo_cf_service) = lo_cf_service_mgr->get_service(
-        service_name            = 'starship'
+        service_name            = 'vehicle_km_by_id_num_srv'
         use_default_service_key = abap_true
     ).
 
@@ -25,7 +25,8 @@ CLASS zcl_blockchain_console_app IMPLEMENTATION.
 
     DATA(lv_result) = lo_blockchain->read(
         chaincode_id    = 'b1008afa8fcea53106ac3a938816fdf2'
-        argument        = 'NCC1701-1'
+        argument        = 'WDD169007-1J-236589'
+
     ).
 
     out->write_text( |Query-Result: { lv_result }.| ).
